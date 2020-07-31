@@ -26,14 +26,6 @@
 
   <!-- import meta -->
   
-    
-      <meta name="msapplication-TileColor" content="#ffffff">
-    
-      <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/browserconfig.xml">
-    
-      <meta name="theme-color" content="#ffffff">
-    
-  
 
   <!-- link -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
@@ -48,6 +40,8 @@
   
 
   
+    <link rel="shortcut icon" type='image/x-icon' href="/img/favicon.ico">
+  
 
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
@@ -58,12 +52,8 @@
   <!-- import link -->
   
   
-  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon-16x16.png">
-  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/site.webmanifest">
-  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon.ico">
+  <link rel="stylesheet" href="./iconfont.css">
+  <link rel="stylesheet" href="./mainSelf.css">
   
 
   
@@ -149,9 +139,11 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='img/moon.jpg'/>
+          
+            <i class='icon iconfont icon-xiaokonglongLOGO mainTitle'></i>
           
           
+            TRUI
           
         </a>
       
@@ -170,7 +162,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-home fa-fw'></i>首页
+                  <i class='icon iconfont icon-tubiao- fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -184,28 +176,60 @@
                   
                   
                   >
-                  <i class='fa fa-grav fa-fw'></i>导航
+                  <i class='icon iconfont icon-dongwuyuan fa-fw'></i>导航
                 </a>
                 
                   <ul class="list-v">
                     
                       
             
-              <li class='header'>
-                <i class='fas fa-tags fa-fw'></i>标签
+              <li>
+                <a class="menuitem flat-box" href=/tags
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
               </li>
             
           
                     
                       
             
-              <li class='header'>
-                <i class='fas fa-list fa-fw'></i>分类
+              <li>
+                <a class="menuitem flat-box" href=/categories
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-list fa-fw'></i>分类
+                </a>
+                
               </li>
             
           
                     
                   </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box" href=/about
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='icon iconfont icon-dongwuyuan fa-fw'></i>关于
+                </a>
                 
               </li>
             
@@ -238,7 +262,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-home fa-fw'></i>首页
+                  <i class='icon iconfont icon-tubiao- fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -252,28 +276,60 @@
                   
                   
                   >
-                  <i class='fa fa-grav fa-fw'></i>导航
+                  <i class='icon iconfont icon-dongwuyuan fa-fw'></i>导航
                 </a>
                 
                   <ul class="list-v">
                     
                       
             
-              <li class='header'>
-                <i class='fas fa-tags fa-fw'></i>标签
+              <li>
+                <a class="menuitem flat-box" href=/tags
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
               </li>
             
           
                     
                       
             
-              <li class='header'>
-                <i class='fas fa-list fa-fw'></i>分类
+              <li>
+                <a class="menuitem flat-box" href=/categories
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-list fa-fw'></i>分类
+                </a>
+                
               </li>
             
           
                     
                   </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box" href=/about
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='icon iconfont icon-dongwuyuan fa-fw'></i>关于
+                </a>
                 
               </li>
             
@@ -291,7 +347,7 @@
   
 
 
-  <div class="l_body nocover">
+  <div class="l_body">
     <div class='body-wrapper' id="pjax-container">
       
         <!--此文件用来存放一些不方便取值的变量-->
@@ -314,16 +370,16 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("none" == "none") { // 移除封面
+  if ("blog" == "none") { // 移除封面
     document.getElementsByClassName('cover')[0].style.display = "none";
     document.getElementsByClassName('l_body')[0].classList.add("nocover");
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("none" == "blog") { // 半屏
+    if ("blog" == "blog") { // 半屏
       document.getElementsByClassName('cover')[0].classList.remove("full");
       document.getElementsByClassName('cover')[0].classList.add("half");
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("none" == "docs") { // 全屏
+    } else if ("blog" == "docs") { // 全屏
       document.getElementsByClassName('cover')[0].classList.remove("half");
       document.getElementsByClassName('cover')[0].classList.add("full");
       document.getElementsByClassName('scroll-down')[0].style.display = "";
@@ -427,71 +483,10 @@
               
                 
   
-    
-    
-
-
 
   
 
   
-    
-    
-
-
-
-  
-
-  
-    
-    
-
-<section class="widget copyright  desktop mobile">
-  <div class='content'>
-    
-      <blockquote>
-        
-          
-            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
-
-          
-        
-          
-            <p>本文永久链接是：<a href=http://yoursite.com/2020/07/30/hello-world/>http://yoursite.com/2020/07/30/hello-world/</a></p>
-          
-        
-      </blockquote>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode  desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      
-        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-        
-          height='64px'
-        ></div>
-      
-    
-      
-        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-        
-          height='64px'
-        ></div>
-      
-    
-  </div>
-</section>
 
   
 
@@ -613,6 +608,29 @@
 <aside class='l_side'>
   
   
+    
+    
+
+<section class="widget qrcode shadow desktop">
+  
+  <header>
+    
+      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>手机观看</span>
+    
+  </header>
+
+
+  <div class='content article-entry'>
+    
+      
+        <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
+        >
+      
+    
+  </div>
+</section>
+
+  
 
   
     
@@ -712,16 +730,16 @@
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
       
-        Use
+        本站使用
         <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
-        as theme, total visits
+        作为主题，总访问量为
           <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
-          times
+          次
         
       
     
